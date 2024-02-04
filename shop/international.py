@@ -13,4 +13,3 @@ def countryLanguage(countryName):
     ''' find country language code from country name '''
     language_code = country_languages[countryName] if countryName in country_languages else 'en'
     return language_code
-
