@@ -1,21 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
 {% block TITLE %}HOME{% endblock %}
-{% block LINKS %}
-<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
-<link rel="stylesheet" href="{% static 'assets/css/open-iconic-bootstrap.min.css' %}">
-<link rel="stylesheet" href="{% static 'assets/css/animate.css' %}">
-<link rel="stylesheet" href="{% static 'assets/css/owl.carousel.min.css' %}">
-<link rel="stylesheet" href="{% static 'assets/css/owl.theme.default.min.css' %}">
-<link rel="stylesheet" href="{% static 'assets/css/magnific-popup.css' %}">
-<link rel="stylesheet" href="{% static 'assets/css/aos.css' %}">
-<link rel="stylesheet" href="{% static 'assets/css/ionicons.min.css' %}">
-<link rel="stylesheet" href="{% static 'assets/css/bootstrap-datepicker.css' %}">
-<link rel="stylesheet" href="{% static 'assets/css/jquery.timepicker.css' %}">
-<link rel="stylesheet" href="{% static 'assets/css/flaticon.css' %}">
-<link rel="stylesheet" href="{% static 'assets/css/icomoon.css' %}">
-<link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
-{% endblock %}
 {% block CONTENT %}
 <body class="goto-here">
 <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
@@ -53,16 +38,17 @@
 	<div class="container">
 		<div class="row">
 			<!------------------------------------------------------------------------------------------------>
+			{% for p in products %}
 			<div class="col-sm-12 col-md-6 col-lg-3 ftco-animate d-flex">
 				<div class="product d-flex flex-column">
-					<a href="#" class="img-prod"><img class="img-fluid" src="{% static 'assets/images/product-6.png' %}" alt="Colorlib Template">
+					<a href="#" class="img-prod"><img class="img-fluid" src="{{ p.product_image }}" alt="Colorlib Template">
 						<span class="status">پر فروش</span>
 						<div class="overlay"></div>
 					</a>
 					<div class="text py-3 pb-4 px-3">
-						<h3><a href="#">نام کالا</a></h3>
+						<h3><a href="#">{{ p.product_sku }}</a></h3>
 						  <div class="pricing">
-							<p class="price"><span class="mr-2 price-dc">$120.00</span><span class="price-sale">$80.00</span></p>
+							<p class="price"><span class="mr-2 price-dc">{{ p.product_regular_price }}</span><span class="price-sale">{{ p.product_price }}</span></p>
 						</div>
 						<p class="bottom-area d-flex px-3">
 							<a href="#" class="add-to-cart text-center py-2 mr-1"><span>مشاهده و خرید<i class="ion-ios-add ml-1"></i></span></a>
@@ -70,6 +56,7 @@
 					</div>
 				</div>
 			</div>
+			{% endfor %}
 			<!------------------------------------------------------------------------------------------------>
 		</div>
 	</div>
@@ -153,15 +140,16 @@
 	<div class="container">
 		<div class="row">
 
+			{% for p in products %}
 			<div class="col-sm-12 col-md-6 col-lg-3 ftco-animate d-flex">
 				<div class="product d-flex flex-column">
-					<a href="#" class="img-prod"><img class="img-fluid" src="{% static 'assets/images/product-6.png' %}" alt="Colorlib Template">
+					<a href="#" class="img-prod"><img class="img-fluid" src="{{ p.product_image }}" alt="Colorlib Template">
 						<div class="overlay"></div>
 					</a>
 					<div class="text py-3 pb-4 px-3">
-						<h3><a href="#">نام کالا</a></h3>
+						<h3><a href="#">{{ p.product_sku }}</a></h3>
 						  <div class="pricing">
-							<p class="price"><span class="mr-2 price-dc">$120.00</span><span class="price-sale">$80.00</span></p>
+							<p class="price"><span class="mr-2 price-dc">{{ p.product_regular_price }}</span><span class="price-sale">{{ p.product_price }}</span></p>
 						</div>
 						<p class="bottom-area d-flex px-3">
 							<a href="#" class="add-to-cart text-center py-2 mr-1"><span>مشاهده و خرید<i class="ion-ios-add ml-1"></i></span></a>
@@ -169,6 +157,7 @@
 					</div>
 				</div>
 			</div>
+			{% endfor %}
 
 		</div>
 
