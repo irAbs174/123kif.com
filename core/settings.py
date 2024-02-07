@@ -15,9 +15,9 @@ SECRET_KEY = "django-insecure-b4r&n65xqoij=**96@i_*fu7n@0@k-agq42e)f1mv=f%vjt=(n
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-irabs174-123kifcom-tysfdv2jeia.ws-eu108.gitpod.io']
+ALLOWED_HOSTS = ['8000-irabs174-123kifcom-tysfdv2jeia.ws-us108.gitpod.io']
 
-CSRF_TRUSTED_ORIGINS = ['https://8000-irabs174-123kifcom-tysfdv2jeia.ws-eu108.gitpod.io']
+CSRF_TRUSTED_ORIGINS = ['https://8000-irabs174-123kifcom-tysfdv2jeia.ws-us108.gitpod.io']
 
 
 # Application definition
@@ -94,7 +94,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
+True
 # Internationalization
 
 LANGUAGE_CODE = "fa"
@@ -131,11 +131,11 @@ STATICFILES_DIRS = [
 STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.ManifestStaticFilesStorage'
 
 # static root Dir configuration 
-STATIC_ROOT = '/var/www/public/kikpick/static'
+STATIC_ROOT = '/var/www/public/123kifCOM/static'
 
 # STATIC URL
 STATIC_URL = '/static/'
 
 # Media root Dir configuration
-MEDIA_ROOT = '/var/www/public/kikpick/media'
+MEDIA_ROOT = '/var/www/public/123kifCOM/media'
 MEDIA_URL = '/media/'
